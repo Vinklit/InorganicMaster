@@ -3,4 +3,20 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="opaque_white">#99FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="noir">#000000</color>
+    <color name="dkgray">#444444</color>
+    <color name="hydrogen">#98C8FA</color>
+    <color name="alkaline">#047099</color>
+    <color name="alkalineEarth">#61BCEB</color>
+    <color name="transitionMetals">#CCE3FF</color>
+    <color name="postTM">#5790F3</color>
+    <color name="metalloids">#EAEFFF</color>
+    <color name="nonMetals">#6CA7D2</color>
+    <color name="halogens">#056780</color>
+    <color name="nobleGases">#CEE1F8</color>
+    <color name="Lanthanides">#3694DB</color>
+    <color name="Actinides">#E8EFFF</color>
+
 </resources>

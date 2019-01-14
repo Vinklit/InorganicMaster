@@ -1,25 +1,15 @@
 package inorganic.chemgames.inorganicmaster;
 
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
-import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 
-
-import com.rd.PageIndicatorView;
-
 import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;
 
-public class MainActivity extends AppCompatActivity {
+public class ReactionPath extends AppCompatActivity {
     private static ViewPager mPager;
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
@@ -38,11 +28,7 @@ public class MainActivity extends AppCompatActivity {
             ImagesArray.add(IMAGES[i]);
 
         mPager = (ViewPager)findViewById(R.id.pager);
-        mPager.setPageTransformer(true, new ZoomOutPageTransformer());
-        mPager.setAdapter(new SlidingImage_Adapter(MainActivity.this,ImagesArray));
-
-        PageIndicatorView pageIndicatorView = (PageIndicatorView) findViewById(R.id.pageIndicatorView);
-        pageIndicatorView.setViewPager(mPager);
+        mPager.setAdapter(new SlidingImage_Adapter(ReactionPath.this,ImagesArray));
 
 
         NUM_PAGES =IMAGES.length;
