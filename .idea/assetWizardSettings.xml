@@ -50,11 +50,11 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="height" value="200" />
-                            <entry key="outputName" value="ic_lih4" />
+                            <entry key="height" value="72" />
+                            <entry key="outputName" value="ic_erlenmeyer_1" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="$USER_HOME$/Documents/Future/Android/Inorganic_Master_Graphics/AppImages/LiH4.svg" />
-                            <entry key="width" value="356" />
+                            <entry key="sourceFile" value="$USER_HOME$/Downloads/Erlenmeyer_1.svg" />
+                            <entry key="width" value="67" />
                           </map>
                         </option>
                       </PersistentState>

@@ -6,21 +6,106 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/reaction"
+        android:id="@+id/product"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.02"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintWidth_default="percent"
         app:layout_constraintHeight_default="percent"
-        app:layout_constraintWidth_percent="0.95"
+        app:layout_constraintWidth_percent="0.4"
         app:layout_constraintHeight_percent="0.15"
         android:background="@color/transitionMetals">
 
+        <TextView
+            android:id="@+id/products"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Compounds formed: "
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
 
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/productlayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/hydrogen"
+        app:layout_constraintBottom_toBottomOf="@id/product"
+        app:layout_constraintLeft_toRightOf="@id/product"
+        app:layout_constraintTop_toTopOf="@id/product"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.57">
+
+        <TextView
+            android:id="@+id/product1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="LiH"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/product2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:id="@+id/product2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="LiH2"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/opaque_noir"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/product3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/product1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:id="@+id/product3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="LiH3"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/opaque_noir"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/product4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/product2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:id="@+id/product4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="LiH4"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/opaque_noir"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/product3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.2" />
 
     </android.support.constraint.ConstraintLayout>
 
@@ -31,26 +116,39 @@
         android:background="@color/metalloids"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHeight_default="percent"
-        app:layout_constraintHeight_percent="0.755"
-        app:layout_constraintLeft_toLeftOf="@id/reaction"
-        app:layout_constraintTop_toBottomOf="@id/reaction"
-        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintHeight_percent="0.79"
+        app:layout_constraintLeft_toLeftOf="@id/product"
+        app:layout_constraintTop_toBottomOf="@id/product"
         app:layout_constraintWidth_default="percent"
-        app:layout_constraintWidth_percent="0.6">
+        app:layout_constraintWidth_percent="0.7">
+
+        <TextView
+            android:id="@+id/textreaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reaction: Li + H = LiH"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintVertical_bias="0.01"
+          />
+
 
         <android.support.v4.view.ViewPager
             android:id="@+id/pager"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textreaction"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHeight_default="percent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintVertical_bias="0.2"
-            app:layout_constraintHeight_percent="0.9"
+            app:layout_constraintVertical_bias="0.02"
+            app:layout_constraintHeight_percent="0.75"
             app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent="0.95"
+            app:layout_constraintWidth_percent="0.9"
             />
 
         <com.rd.PageIndicatorView
@@ -68,27 +166,8 @@
             app:piv_selectedColor="@color/halogens"
             app:piv_unselectedColor="@color/nonMetals"
             app:piv_viewPager="@id/pager"
-            app:piv_radius="8dp"
+            app:piv_radius="5dp"
           />
-
-
-    </android.support.constraint.ConstraintLayout>
-
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/bonding"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/Actinides"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHeight_default="percent"
-        app:layout_constraintHeight_percent="0.55"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toRightOf="@id/orbitaldiagram"
-        app:layout_constraintRight_toRightOf="@id/reaction"
-        app:layout_constraintTop_toTopOf="@id/orbitaldiagram"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintWidth_default="percent"
-        app:layout_constraintWidth_percent="0.34">
 
 
     </android.support.constraint.ConstraintLayout>
@@ -97,17 +176,242 @@
         android:id="@+id/properties"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@color/Actinides"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@id/orbitaldiagram"
+        app:layout_constraintRight_toRightOf="@id/productlayout"
+        app:layout_constraintTop_toTopOf="@id/orbitaldiagram"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.26">
+
+        <TextView
+            android:id="@+id/textproperties"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Properties"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.01"
+            android:paddingVertical="2dp"/>
+
+        <TextView
+            android:id="@+id/bondtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Bond type: "
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textproperties"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.1"
+            android:layout_marginVertical="2dp"/>
+
+        <TextView
+            android:id="@+id/bondtypevalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ionic"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            app:layout_constraintBottom_toBottomOf="@+id/bondtype"
+            app:layout_constraintLeft_toRightOf="@+id/bondtype"
+            app:layout_constraintTop_toTopOf="@+id/bondtype" />
+
+        <TextView
+            android:id="@+id/crystalstr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Cryst. str: "
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bondtype"
+            app:layout_constraintVertical_bias="0.01"
+            android:layout_marginVertical="2dp"/>
+
+        <TextView
+            android:id="@+id/crystalstrvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fcc (NaCl)"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            app:layout_constraintBottom_toBottomOf="@+id/crystalstr"
+            app:layout_constraintLeft_toRightOf="@+id/crystalstr"
+            app:layout_constraintTop_toTopOf="@+id/crystalstr" />
+
+        <TextView
+            android:id="@+id/enthalpy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="dfH°: "
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/crystalstr"
+            app:layout_constraintVertical_bias="0.01"
+            android:layout_marginVertical="2dp"/>
+
+        <TextView
+            android:id="@+id/enthalpyvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="−90.65 kJ/mol"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            app:layout_constraintBottom_toBottomOf="@+id/enthalpy"
+            app:layout_constraintLeft_toRightOf="@+id/enthalpy"
+            app:layout_constraintTop_toTopOf="@+id/enthalpy" />
+
+        <TextView
+            android:id="@+id/density"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Density: "
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enthalpy"
+            app:layout_constraintVertical_bias="0.01"
+            android:layout_marginVertical="2dp"/>
+
+        <TextView
+            android:id="@+id/densityvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.78 g/cm3"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            app:layout_constraintBottom_toBottomOf="@+id/density"
+            app:layout_constraintLeft_toRightOf="@+id/density"
+            app:layout_constraintTop_toTopOf="@+id/density" />
+
+        <TextView
+            android:id="@+id/meltingpt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Melting pt: "
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/density"
+            app:layout_constraintVertical_bias="0.01"
+            android:layout_marginVertical="2dp"/>
+
+        <TextView
+            android:id="@+id/meltptvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="688.7 °C"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            app:layout_constraintBottom_toBottomOf="@+id/meltingpt"
+            app:layout_constraintLeft_toRightOf="@+id/meltingpt"
+            app:layout_constraintTop_toTopOf="@+id/meltingpt" />
+
+        <TextView
+            android:id="@+id/boilingpt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Boiling pt: "
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/meltingpt"
+            app:layout_constraintVertical_bias="0.01"
+            android:layout_marginVertical="2dp"/>
+
+        <TextView
+            android:id="@+id/boilingptvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000 °C"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            app:layout_constraintBottom_toBottomOf="@+id/boilingpt"
+            app:layout_constraintLeft_toRightOf="@+id/boilingpt"
+            app:layout_constraintTop_toTopOf="@+id/boilingpt" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/synthesis"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@color/nobleGases"
         app:layout_constraintBottom_toBottomOf="@id/orbitaldiagram"
         app:layout_constraintHeight_default="percent"
-        app:layout_constraintHeight_percent="0.19"
+        app:layout_constraintHeight_percent="0.27"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toRightOf="@id/orbitaldiagram"
-        app:layout_constraintRight_toRightOf="@id/reaction"
-        app:layout_constraintTop_toBottomOf="@id/bonding"
+        app:layout_constraintRight_toRightOf="@id/productlayout"
+        app:layout_constraintTop_toBottomOf="@id/properties"
         app:layout_constraintVertical_bias="1"
         app:layout_constraintWidth_default="percent"
-        app:layout_constraintWidth_percent="0.34">
+        app:layout_constraintWidth_percent="0.26">
+
+        <TextView
+            android:id="@+id/textsynthesis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Synthesis"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintVertical_bias="0.01"
+            />
+
+       <ImageView
+           android:id="@+id/erlenmeyer"
+           android:layout_width="0dp"
+           android:layout_height="0dp"
+           app:layout_constraintHeight_default="percent"
+           app:layout_constraintHeight_percent="0.6"
+           app:layout_constraintTop_toBottomOf="@id/textsynthesis"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintWidth_default="percent"
+           app:layout_constraintHorizontal_bias="0.1"
+           app:layout_constraintWidth_percent="0.2"
+           android:src="@drawable/ic_erlenmeyer_1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintTop_toBottomOf="@id/textsynthesis"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/erlenmeyer"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.6"
+            android:backgroundTint="@color/white"
+            android:text="View"/>
 
 
     </android.support.constraint.ConstraintLayout>

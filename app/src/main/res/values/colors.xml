@@ -6,6 +6,7 @@
     <color name="opaque_white">#99FFFFFF</color>
     <color name="white">#FFFFFF</color>
     <color name="noir">#000000</color>
+    <color name="opaque_noir">#60000000</color>
     <color name="dkgray">#444444</color>
     <color name="hydrogen">#98C8FA</color>
     <color name="alkaline">#047099</color>
